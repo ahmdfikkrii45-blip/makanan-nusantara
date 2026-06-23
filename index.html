@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cita Rasa Nusantara - Platform penjualan makanan tradisional berkualitas tinggi dari berbagai daerah di Indonesia">
+    <meta name="theme-color" content="#FF6B35">
+    <title>Cita Rasa Nusantara - Jual Beli Makanan Daerah Indonesia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50' y='80' font-size='80' text-anchor='middle'>🍲</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🍲</span>
+                <h1>Cita Rasa Nusantara</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Beranda</a></li>
+                <li><a href="products.html" class="nav-link">Menu Makanan</a></li>
+                <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
+                <li><a href="contact.html" class="nav-link">Kontak</a></li>
+            </ul>
+            <div class="cart-icon">
+                <span>🛒</span>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2 class="hero-title">Nikmati Cita Rasa Autentik dari Seluruh Nusantara</h2>
+            <p class="hero-subtitle">Makanan tradisional berkualitas tinggi, langsung dari sumber terbaik di setiap pulau Indonesia</p>
+            <div class="hero-buttons">
+                <a href="products.html" class="btn btn-primary">Jelajahi Menu</a>
+                <a href="about.html" class="btn btn-secondary">Pelajari Lebih Lanjut</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="hero-visual">
+                <span style="font-size: 120px;">🍜</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="featured-categories">
+        <div class="container">
+            <h2 class="section-title">Makanan dari Pulau-Pulau Pilihan</h2>
+            <div class="categories-grid">
+                <div class="category-card" onclick="filterByRegion('sumatra')">
+                    <div class="category-icon">🥘</div>
+                    <h3>Sumatra</h3>
+                    <p>Rendang, Lumpia, Martabak</p>
+                    <span class="category-arrow">→</span>
+                </div>
+                <div class="category-card" onclick="filterByRegion('java')">
+                    <div class="category-icon">🍛</div>
+                    <h3>Jawa</h3>
+                    <p>Gado-gado, Soto Ayam, Lumpia</p>
+                    <span class="category-arrow">→</span>
+                </div>
+                <div class="category-card" onclick="filterByRegion('bali')">
+                    <div class="category-icon">🌶️</div>
+                    <h3>Bali</h3>
+                    <p>Bebek Betutu, Babi Guling, Satay</p>
+                    <span class="category-arrow">→</span>
+                </div>
+                <div class="category-card" onclick="filterByRegion('kalimantan')">
+                    <div class="category-icon">🍖</div>
+                    <h3>Kalimantan</h3>
+                    <p>Lempah Kuah, Soto Banjar, Terang Bulan</p>
+                    <span class="category-arrow">→</span>
+                </div>
+                <div class="category-card" onclick="filterByRegion('sulawesi')">
+                    <div class="category-icon">🦐</div>
+                    <h3>Sulawesi</h3>
+                    <p>Tinutuan, Cakalang, Woku</p>
+                    <span class="category-arrow">→</span>
+                </div>
+                <div class="category-card" onclick="filterByRegion('nusa-tenggara')">
+                    <div class="category-icon">🍚</div>
+                    <h3>Nusa Tenggara</h3>
+                    <p>Soto Ayam Kupang, Tinutuan, Sate Kambing</p>
+                    <span class="category-arrow">→</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Sellers -->
+    <section class="best-sellers">
+        <div class="container">
+            <h2 class="section-title">Produk Unggulan Kami</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-emoji">🥘</span>
+                        <span class="badge">Best Seller</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Rendang Daging Padang</h3>
+                        <p class="region">📍 Sumatera Barat</p>
+                        <p class="description">Rendang daging sapi authentic dengan bumbu rempah pilihan</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (428 ulasan)</div>
+                        <div class="price-section">
+                            <span class="price">Rp 85.000</span>
+                            <span class="per-pack">/ porsi</span>
+                        </div>
+                        <button class="btn-cart" onclick="addToCart('Rendang Daging Padang', 85000)">+ Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-emoji">🍛</span>
+                        <span class="badge">Best Seller</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Soto Ayam Jogja</h3>
+                        <p class="region">📍 Daerah Istimewa Yogyakarta</p>
+                        <p class="description">Kuah soto ayam kuning dengan aromaterapi khas Jogja</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (356 ulasan)</div>
+                        <div class="price-section">
+                            <span class="price">Rp 35.000</span>
+                            <span class="per-pack">/ mangkuk</span>
+                        </div>
+                        <button class="btn-cart" onclick="addToCart('Soto Ayam Jogja', 35000)">+ Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-emoji">🌶️</span>
+                        <span class="badge">Spesial</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Bebek Betutu Bali</h3>
+                        <p class="region">📍 Bali</p>
+                        <p class="description">Bebek empuk dimasak dalam daun kelapa dengan bumbu rempah</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (512 ulasan)</div>
+                        <div class="price-section">
+                            <span class="price">Rp 95.000</span>
+                            <span class="per-pack">/ porsi</span>
+                        </div>
+                        <button class="btn-cart" onclick="addToCart('Bebek Betutu Bali', 95000)">+ Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-emoji">🦐</span>
+                        <span class="badge">Populer</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Cakalang Manado</h3>
+                        <p class="region">📍 Sulawesi Utara</p>
+                        <p class="description">Babi crispy dengan cita rasa khas Manado yang gurih</p>
+                        <div class="rating">⭐⭐⭐⭐☆ (289 ulasan)</div>
+                        <div class="price-section">
+                            <span class="price">Rp 75.000</span>
+                            <span class="per-pack">/ porsi</span>
+                        </div>
+                        <button class="btn-cart" onclick="addToCart('Cakalang Manado', 75000)">+ Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-emoji">🌮</span>
+                        <span class="badge">Favorit</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Gado-gado Jakarta</h3>
+                        <p class="region">📍 Jakarta</p>
+                        <p class="description">Perpaduan sayuran segar dengan saus kacang kental</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (634 ulasan)</div>
+                        <div class="price-section">
+                            <span class="price">Rp 25.000</span>
+                            <span class="per-pack">/ porsi</span>
+                        </div>
+                        <button class="btn-cart" onclick="addToCart('Gado-gado Jakarta', 25000)">+ Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-emoji">🍚</span>
+                        <span class="badge">Baru</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Tinutuan Manado</h3>
+                        <p class="region">📍 Sulawesi Utara</p>
+                        <p class="description">Bubur nasi kental dengan ikan dan daun bawang</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (187 ulasan)</div>
+                        <div class="price-section">
+                            <span class="price">Rp 30.000</span>
+                            <span class="per-pack">/ porsi</span>
+                        </div>
+                        <button class="btn-cart" onclick="addToCart('Tinutuan Manado', 30000)">+ Tambah ke Keranjang</button>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all-btn">
+                <a href="products.html" class="btn btn-primary">Lihat Semua Menu →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us">
+        <div class="container">
+            <h2 class="section-title">Mengapa Memilih Kami?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">✨</div>
+                    <h3>Autentik & Berkualitas</h3>
+                    <p>Semua makanan berasal dari para ahli tradisional dan dipilih dengan cermat untuk kualitas terbaik</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🚚</div>
+                    <h3>Pengiriman Cepat</h3>
+                    <p>Kami menjamin pengiriman dalam kondisi terbaik dengan packaging yang aman dan rapi</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💯</div>
+                    <h3>Garansi Kepuasan</h3>
+                    <p>Jika tidak puas, kami siap mengembalikan dana Anda tanpa pertanyaan yang berbelit</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Mendukung UMKM</h3>
+                    <p>Setiap pembelian Anda mendukung pengrajin dan petani lokal di seluruh Indonesia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Dapatkan Promo Eksklusif!</h2>
+                <p>Berlangganan newsletter kami untuk mendapatkan diskon hingga 20% dan penawaran spesial lainnya</p>
+                <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                    <input type="email" placeholder="Masukkan email Anda" required>
+                    <button type="submit" class="btn btn-primary">Berlangganan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Tentang Kami</h4>
+                    <p>Cita Rasa Nusantara adalah platform penjualan makanan tradisional dari berbagai daerah di Indonesia yang autentik dan berkualitas tinggi.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Kategori</h4>
+                    <ul>
+                        <li><a href="#sumatra">Sumatera</a></li>
+                        <li><a href="#java">Jawa</a></li>
+                        <li><a href="#bali">Bali</a></li>
+                        <li><a href="#sulawesi">Sulawesi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Hubungi Kami</h4>
+                    <ul>
+                        <li>📧 info@citarasanusantara.com</li>
+                        <li>📱 +62 812-3456-7890</li>
+                        <li>📍 Jakarta, Indonesia</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Ikuti Kami</h4>
+                    <div class="social-links">
+                        <a href="#" class="social">Instagram</a>
+                        <a href="#" class="social">Facebook</a>
+                        <a href="#" class="social">TikTok</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cita Rasa Nusantara. Semua hak dilindungi. | <a href="#">Kebijakan Privasi</a> | <a href="#">Syarat & Ketentuan</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Makanan - Cita Rasa Nusantara</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🍲</span>
+                <h1>Cita Rasa Nusantara</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="products.html" class="nav-link active">Menu Makanan</a></li>
+                <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
+                <li><a href="contact.html" class="nav-link">Kontak</a></li>
+            </ul>
+            <div class="cart-icon">
+                <span>🛒</span>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Jelajahi Menu Lengkap Kami</h1>
+            <p>Pilih makanan tradisional favorit dari seluruh nusantara</p>
+        </div>
+    </section>
+
+    <!-- Filter & Search -->
+    <section class="products-section">
+        <div class="container">
+            <div class="filter-container">
+                <h3>Filter Makanan</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="filterProducts('all')">Semua Kategori</button>
+                    <button class="filter-btn" onclick="filterProducts('sumatra')">Sumatera</button>
+                    <button class="filter-btn" onclick="filterProducts('java')">Jawa</button>
+                    <button class="filter-btn" onclick="filterProducts('bali')">Bali</button>
+                    <button class="filter-btn" onclick="filterProducts('kalimantan')">Kalimantan</button>
+                    <button class="filter-btn" onclick="filterProducts('sulawesi')">Sulawesi</button>
+                    <button class="filter-btn" onclick="filterProducts('nusa-tenggara')">Nusa Tenggara</button>
+                </div>
+
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Cari makanan..." onkeyup="searchProducts()">
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="all-products-grid" id="productsContainer">
+                <!-- Sumatra -->
+                <div class="product-card" data-region="sumatra" data-category="makanan">
+                    <div class="product-image"><span class="product-emoji">🥘</span></div>
+                    <div class="product-info">
+                        <h3>Rendang Daging Padang</h3>
+                        <p class="region">📍 Sumatera Barat</p>
+                        <p class="description">Daging sapi empuk dengan bumbu rempah kaya rasa</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (428)</div>
+                        <span class="price">Rp 85.000</span>
+                        <button class="btn-cart" onclick="addToCart('Rendang Daging Padang', 85000)">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-region="sumatra">
+                    <div class="product-image"><span class="product-emoji">🌶️</span></div>
+                    <div class="product-info">
+                        <h3>Lumpia Goreng Medan</h3>
+                        <p class="region">📍 Sumatera Utara</p>
+                        <p class="description">Lumpia crispy dengan isi daging dan sayuran</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (356)</div>
+                        <span class="price">Rp 28.000</span>
+                        <button class="btn-cart" onclick="addToCart('Lumpia Goreng Medan', 28000)">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-region="sumatra">
+                    <div class="product-image"><span class="product-emoji">🥟</span></div>
+                    <div class="product-info">
+                        <h3>Martabak Terang Bulan</h3>
+                        <p class="region">📍 Sumatra</p>
+                        <p class="description">Martabak empuk dengan aneka pilihan isi</p>
+                        <div class="rating">⭐⭐⭐⭐☆ (289)</div>
+                        <span class="price">Rp 15.000</span>
+                        <button class="btn-cart" onclick="addToCart('Martabak Terang Bulan', 15000)">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-region="sumatra">
+                    <div class="product-image"><span class="product-emoji">🍲</span></div>
+                    <div class="product-info">
+                        <h3>Pempek Palembang</h3>
+                        <p class="region">📍 Sumatera Selatan</p>
+                        <p class="description">Makanan tradisional dengan kuah cuko khas</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (512)</div>
+                        <span class="price">Rp 32.000</span>
+                        <button class="btn-cart" onclick="addToCart('Pempek Palembang', 32000)">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Java -->
+                <div class="product-card" data-region="java">
+                    <div class="product-image"><span class="product-emoji">🍛</span></div>
+                    <div class="product-info">
+                        <h3>Soto Ayam Jogja</h3>
+                        <p class="region">📍 Daerah Istimewa Yogyakarta</p>
+                        <p class="description">Kuah kuning hangat dengan aroma rempah</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (634)</div>
+                        <span class="price">Rp 35.000</span>
+                        <button class="btn-cart" onclick="addToCart('Soto Ayam Jogja', 35000)">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-region="java">
+                    <div class="product-image"><span class="product-emoji">🌮</span></div>
+                    <div class="product-info">
+                        <h3>Gado-gado Jakarta</h3>
+                        <p class="region">📍 Jakarta</p>
+                        <p class="description">Sayuran segar dengan saus kacang kental</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (578)</div>
+                        <span class="price">Rp 25.000</span>
+                        <button class="btn-cart" onclick="addToCart('Gado-gado Jakarta', 25000)">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-region="java">
+                    <div class="product-image"><span class="product-emoji">🍜</span></div>
+                    <div class="product-info">
+                        <h3>Soto Banjar</h3>
+                        <p class="region">📍 Jawa Timur</p>
+                        <p class="description">Soto daging tradisional dengan bumbu harum</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (445)</div>
+                        <span class="price">Rp 38.000</span>
+                        <button class="btn-cart" onclick="addToCart('Soto Banjar', 38000)">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-region="java">
+                    <div class="product-image"><span class="product-emoji">🥟</span></div>
+                    <div class="product-info">
+                        <h3>Perkedel Goreng</h3>
+                        <p class="region">📍 Jawa Barat</p>
+                        <p class="description">Perkedel crispy dengan daging enak</p>
+                        <div class="rating">⭐⭐⭐⭐☆ (367)</div>
+                        <span class="price">Rp 18.000</span>
+                        <button class="btn-cart" onclick="addToCart('Perkedel Goreng', 18000)">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Bali -->
+                <div class="product-card" data-region="bali">
+                    <div class="product-image"><span class="product-emoji">🌶️</span></div>
+                    <div class="product-info">
+                        <h3>Bebek Betutu Bali</h3>
+                        <p class="region">📍 Bali</p>
+                        <p class="description">Bebek empuk dalam daun kelapa berumur rempah</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (512)</div>
+                        <span class="price">Rp 95.000</span>
+                        <button class="btn-cart" onclick="addToCart('Bebek Betutu Bali', 95000)">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-region="bali">
+                    <div class="product-image"><span class="product-emoji">🍖</span></div>
+                    <div class="product-info">
+                        <h3>Babi Guling Bali</h3>
+                        <p class="region">📍 Bali</p>
+                        <p class="description">Babi panggang dengan bumbu kuning khas Bali</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (489)</div>
+                        <span class="price">Rp 105.000</span>
+                        <button class="btn-cart" onclick="addToCart('Babi Guling Bali', 105000)">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-region="bali">
+                    <div class="product-image"><span class="product-emoji">🍗</span></div>
+                    <div class="product-info">
+                        <h3>Sate Babi Bali</h3>
+                        <p class="region">📍 Bali</p>
+                        <p class="description">Daging babi tusuk dengan bumbu terasi khas</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (401)</div>
+                        <span class="price">Rp 45.000</span>
+                        <button class="btn-cart" onclick="addToCart('Sate Babi Bali', 45000)">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-region="bali">
+                    <div class="product-image"><span class="product-emoji">🌶️</span></div>
+                    <div class="product-info">
+                        <h3>Sambal Matah Bali</h3>
+                        <p class="region">📍 Bali</p>
+                        <p class="description">Sambal segar dengan bawang merah dan bawang putih</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (287)</div>
+                        <span class="price">Rp 22.000</span>
+                        <button class="btn-cart" onclick="addToCart('Sambal Matah Bali', 22000)">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Kalimantan -->
+                <div class="product-card" data-region="kalimantan">
+                    <div class="product-image"><span class="product-emoji">🍖</span></div>
+                    <div class="product-info">
+                        <h3>Lempah Kuah Banjar</h3>
+                        <p class="region">📍 Kalimantan Selatan</p>
+                        <p class="description">Daging dalam kuah asam pedas khas Banjar</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (398)</div>
+                        <span class="price">Rp 48.000</span>
+                        <button class="btn-cart" onclick="addToCart('Lempah Kuah Banjar', 48000)">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-region="kalimantan">
+                    <div class="product-image"><span class="product-emoji">🍜</span></div>
+                    <div class="product-info">
+                        <h3>Soto Banjar Klasik</h3>
+                        <p class="region">📍 Kalimantan Selatan</p>
+                        <p class="description">Sup tradisional dengan daging sapi berkuah</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (456)</div>
+                        <span class="price">Rp 40.000</span>
+                        <button class="btn-cart" onclick="addToCart('Soto Banjar Klasik', 40000)">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-region="kalimantan">
+                    <div class="product-image"><span class="product-emoji">🥘</span></div>
+                    <div class="product-info">
+                        <h3>Bingka Landak</h3>
+                        <p class="region">📍 Kalimantan Utara</p>
+                        <p class="description">Kue tradisional dengan ubi dan kelapa</p>
+                        <div class="rating">⭐⭐⭐⭐☆ (234)</div>
+                        <span class="price">Rp 24.000</span>
+                        <button class="btn-cart" onclick="addToCart('Bingka Landak', 24000)">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-region="kalimantan">
+                    <div class="product-image"><span class="product-emoji">🍚</span></div>
+                    <div class="product-info">
+                        <h3>Nasi Goreng Kalimantan</h3>
+                        <p class="region">📍 Kalimantan Timur</p>
+                        <p class="description">Nasi goreng dengan cita rasa khas daerah</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (323)</div>
+                        <span class="price">Rp 32.000</span>
+                        <button class="btn-cart" onclick="addToCart('Nasi Goreng Kalimantan', 32000)">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Sulawesi -->
+                <div class="product-card" data-region="sulawesi">
+                    <div class="product-image"><span class="product-emoji">🦐</span></div>
+                    <div class="product-info">
+                        <h3>Cakalang Manado</h3>
+                        <p class="region">📍 Sulawesi Utara</p>
+                        <p class="description">Babi crispy dengan rasa gurih khas Manado</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (501)</div>
+                        <span class="price">Rp 75.000</span>
+                        <button class="btn-cart" onclick="addToCart('Cakalang Manado', 75000)">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-region="sulawesi">
+                    <div class="product-image"><span class="product-emoji">🍜</span></div>
+                    <div class="product-info">
+                        <h3>Tinutuan Manado</h3>
+                        <p class="region">📍 Sulawesi Utara</p>
+                        <p class="description">Bubur nasi dengan ikan dan daun bawang</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (378)</div>
+                        <span class="price">Rp 30.000</span>
+                        <button class="btn-cart" onclick="addToCart('Tinutuan Manado', 30000)">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-region="sulawesi">
+                    <div class="product-image"><span class="product-emoji">🌶️</span></div>
+                    <div class="product-info">
+                        <h3>Woku Manado</h3>
+                        <p class="region">📍 Sulawesi Utara</p>
+                        <p class="description">Ikan/daging dalam bumbu woku pedas nikmat</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (412)</div>
+                        <span class="price">Rp 55.000</span>
+                        <button class="btn-cart" onclick="addToCart('Woku Manado', 55000)">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-region="sulawesi">
+                    <div class="product-image"><span class="product-emoji">🍖</span></div>
+                    <div class="product-info">
+                        <h3>Tinutuan Nasi Kuning</h3>
+                        <p class="region">📍 Sulawesi Tengah</p>
+                        <p class="description">Bubur kuning tradisional kaya rasa</p>
+                        <div class="rating">⭐⭐⭐⭐☆ (267)</div>
+                        <span class="price">Rp 28.000</span>
+                        <button class="btn-cart" onclick="addToCart('Tinutuan Nasi Kuning', 28000)">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Nusa Tenggara -->
+                <div class="product-card" data-region="nusa-tenggara">
+                    <div class="product-image"><span class="product-emoji">🍛</span></div>
+                    <div class="product-info">
+                        <h3>Soto Ayam Kupang</h3>
+                        <p class="region">📍 Nusa Tenggara Timur</p>
+                        <p class="description">Soto kuning dengan cita rasa timur</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (334)</div>
+                        <span class="price">Rp 36.000</span>
+                        <button class="btn-cart" onclick="addToCart('Soto Ayam Kupang', 36000)">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-region="nusa-tenggara">
+                    <div class="product-image"><span class="product-emoji">🍗</span></div>
+                    <div class="product-info">
+                        <h3>Sate Kambing NTT</h3>
+                        <p class="region">📍 Nusa Tenggara Timur</p>
+                        <p class="description">Daging kambing tusuk dengan bumbu rempah</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (289)</div>
+                        <span class="price">Rp 52.000</span>
+                        <button class="btn-cart" onclick="addToCart('Sate Kambing NTT', 52000)">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-region="nusa-tenggara">
+                    <div class="product-image"><span class="product-emoji">🍚</span></div>
+                    <div class="product-info">
+                        <h3>Tinutuan NTT</h3>
+                        <p class="region">📍 Nusa Tenggara Barat</p>
+                        <p class="description">Bubur tradisional kental dan gurih</p>
+                        <div class="rating">⭐⭐⭐⭐☆ (156)</div>
+                        <span class="price">Rp 26.000</span>
+                        <button class="btn-cart" onclick="addToCart('Tinutuan NTT', 26000)">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-region="nusa-tenggara">
+                    <div class="product-image"><span class="product-emoji">🌶️</span></div>
+                    <div class="product-info">
+                        <h3>Sambal NTT Pedas</h3>
+                        <p class="region">📍 Nusa Tenggara Timur</p>
+                        <p class="description">Sambal dengan cabai pilihan sangat nikmat</p>
+                        <div class="rating">⭐⭐⭐⭐⭐ (223)</div>
+                        <span class="price">Rp 20.000</span>
+                        <button class="btn-cart" onclick="addToCart('Sambal NTT Pedas', 20000)">+ Keranjang</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Tentang Kami</h4>
+                    <p>Cita Rasa Nusantara menyediakan makanan tradisional autentik dari seluruh Indonesia.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Kategori Populer</h4>
+                    <ul>
+                        <li><a href="#sumatra">Sumatera</a></li>
+                        <li><a href="#java">Jawa</a></li>
+                        <li><a href="#bali">Bali</a></li>
+                        <li><a href="#sulawesi">Sulawesi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Hubungi Kami</h4>
+                    <ul>
+                        <li>📧 info@citarasanusantara.com</li>
+                        <li>📱 +62 812-3456-7890</li>
+                        <li>📍 Jakarta, Indonesia</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Ikuti Kami</h4>
+                    <div class="social-links">
+                        <a href="#" class="social">Instagram</a>
+                        <a href="#" class="social">Facebook</a>
+                        <a href="#" class="social">TikTok</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cita Rasa Nusantara. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

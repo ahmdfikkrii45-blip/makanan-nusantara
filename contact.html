@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Kami - Cita Rasa Nusantara</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🍲</span>
+                <h1>Cita Rasa Nusantara</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="products.html" class="nav-link">Menu Makanan</a></li>
+                <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
+                <li><a href="contact.html" class="nav-link active">Kontak</a></li>
+            </ul>
+            <div class="cart-icon">
+                <span>🛒</span>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Hubungi Kami</h1>
+            <p>Kami siap membantu Anda kapan saja</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2>Informasi Kontak</h2>
+                    <p>Hubungi kami melalui berbagai channel komunikasi yang tersedia. Tim kami akan merespon dengan cepat.</p>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Telepon</h4>
+                            <p>+62 812-3456-7890</p>
+                            <p class="small">Senin - Jumat: 08:00 - 17:00 WIB</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@citarasanusantara.com</p>
+                            <p class="small">Response time: < 2 jam</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Alamat Kantor</h4>
+                            <p>Jl. Kuliner Nusantara No. 123</p>
+                            <p>Jakarta Selatan 12345</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">⏰</div>
+                        <div>
+                            <h4>Jam Operasional</h4>
+                            <p>Senin - Jumat: 08:00 - 18:00</p>
+                            <p>Sabtu: 09:00 - 16:00</p>
+                            <p>Minggu: Libur</p>
+                        </div>
+                    </div>
+
+                    <div class="social-section">
+                        <h4>Ikuti Media Sosial Kami</h4>
+                        <div class="social-links-large">
+                            <a href="#" class="social-btn">📱 Instagram</a>
+                            <a href="#" class="social-btn">👍 Facebook</a>
+                            <a href="#" class="social-btn">🎵 TikTok</a>
+                            <a href="#" class="social-btn">🐦 Twitter</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2>Kirim Pesan Kami</h2>
+                    <form class="contact-form" onsubmit="submitContactForm(event)">
+                        <div class="form-group">
+                            <label for="name">Nama Lengkap *</label>
+                            <input type="text" id="name" name="name" required placeholder="Masukkan nama Anda">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="Masukkan email Anda">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Nomor Telepon</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Masukkan nomor telepon Anda">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subjek *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">-- Pilih Subjek --</option>
+                                <option value="pesanan">Pertanyaan Pesanan</option>
+                                <option value="produk">Pertanyaan Produk</option>
+                                <option value="komplain">Komplain/Keluhan</option>
+                                <option value="partnership">Kerjasama Bisnis</option>
+                                <option value="lainnya">Lainnya</lainnya>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Pesan *</label>
+                            <textarea id="message" name="message" required placeholder="Tulis pesan Anda di sini..." rows="6"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Pertanyaan yang Sering Diajukan</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Berapa lama pengiriman makanan?</h3>
+                    <p>Pengiriman biasanya memakan waktu 1-3 hari kerja tergantung lokasi Anda. Kami menggunakan packaging khusus untuk menjaga kesegaran makanan.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Apakah makanan halal?</h3>
+                    <p>Ya, semua produk kami bersertifikat halal dan diproduksi sesuai standar kebersihan internasional.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Bagaimana jika makanan tidak sesuai harapan?</h3>
+                    <p>Kami menawarkan garansi kepuasan 100%. Jika tidak puas, Anda bisa mengembalikan atau menggantinya tanpa biaya tambahan.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Apakah ada biaya pengiriman tambahan?</h3>
+                    <p>Biaya pengiriman tergantung lokasi Anda. Gratis ongkos kirim untuk pembelian di atas Rp 200.000 ke area Jabodetabek.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Bagaimana cara pembayaran?</h3>
+                    <p>Kami menerima berbagai metode pembayaran: transfer bank, kartu kredit, e-wallet (GCash, OVO, Dana), dan COD.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Bisakah saya memesan untuk acara tertentu?</h3>
+                    <p>Tentu! Hubungi kami untuk pemesanan dalam jumlah besar atau customisasi untuk acara spesial Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Dapatkan Penawaran Spesial!</h2>
+                <p>Berlangganan newsletter kami untuk mendapatkan promo eksklusif dan update menu terbaru</p>
+                <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                    <input type="email" placeholder="Masukkan email Anda" required>
+                    <button type="submit" class="btn btn-primary">Berlangganan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Tentang Kami</h4>
+                    <p>Platform penjualan makanan tradisional Indonesia yang autentik dan berkualitas tinggi.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Kategori Populer</h4>
+                    <ul>
+                        <li><a href="products.html#sumatra">Sumatera</a></li>
+                        <li><a href="products.html#java">Jawa</a></li>
+                        <li><a href="products.html#bali">Bali</a></li>
+                        <li><a href="products.html#sulawesi">Sulawesi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Hubungi Kami</h4>
+                    <ul>
+                        <li>📧 info@citarasanusantara.com</li>
+                        <li>📱 +62 812-3456-7890</li>
+                        <li>📍 Jakarta, Indonesia</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Ikuti Kami</h4>
+                    <div class="social-links">
+                        <a href="#" class="social">Instagram</a>
+                        <a href="#" class="social">Facebook</a>
+                        <a href="#" class="social">TikTok</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cita Rasa Nusantara. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
